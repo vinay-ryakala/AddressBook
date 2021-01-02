@@ -2,25 +2,30 @@ package AddressBookSystem;
 
 public class Person 
 {
-	 private String firstName;  
-	 private String lastName;
-	 private String phoneNumber;
-	 private Address address;
+	private String firstName;  
+	private String lastName;
+	private String phoneNumber;
+	private String city;
+	private String state;
+	private String zipcode;
+	private String email;
 
 	  //constructor
-	  public Person(String firstName, String lastName, String phoneNumber, Address address) 
+	  public Person(String firstName, String lastName, String phoneNumber, String city, String state, String zipcode, String email) 
 	  {
 	    this.firstName = firstName;
 	    this.lastName = lastName;
 	    this.phoneNumber = phoneNumber;
-	    this.address=address;
-
+	    this.city=city;
+		this.state=state;
+		this.email=email;
+		this.zipcode=zipcode;
 	  }
 	
 	public String toString() 
 	{
-		return "Person [firstname=" + firstName + ", lastname=" + lastName + ", phoneNumber=" + phoneNumber
-				+ ", address=" + address + "]";
+		return "Person [firstname=" + firstName + ", lastname=" + lastName + ", phoneNumber=" + phoneNumber+
+				"city=" + city + ", state=" + state + ", zipcode=" + zipcode + ", email=" + email+"]";
 	}
 
 
@@ -53,4 +58,37 @@ public class Person
 		this.phoneNumber = phoneNumber;
 	}
 
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getZipCode() {
+		return zipcode;
+	}
+
+	public void setZipCode(String zipcode) {
+		this.zipcode = zipcode;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 }
+

@@ -25,7 +25,7 @@ public class Person
 	public String toString() 
 	{
 		return "Person [firstname=" + firstName + ", lastname=" + lastName + ", phoneNumber=" + phoneNumber+
-				"city=" + city + ", state=" + state + ", zipcode=" + zipcode + ", email=" + email+"]";
+				" city=" + city + ", state=" + state + ", zipcode=" + zipcode + ", email=" + email+"]";
 	}
 
 

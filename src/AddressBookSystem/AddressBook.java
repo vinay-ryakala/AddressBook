@@ -59,8 +59,25 @@ public class AddressBook
 				person.setZipCode(zipCode);
 				person.setEmail(email);
 			}
+			else
+				System.out.println("first name not found");
 		}	
 	}
+	private static void delete() 
+	{
+		Scanner input = new Scanner(System.in); 
+		System.out.println("Enter firstname to delete details");
+		String name = input.nextLine();
+		for (int i=0; i<contacts.size(); i++)
+		{
+			if (name.equals(contacts.get(i).getFirstName())) 
+			{
+				contacts.remove(i);
+				System.out.println("deleted "+name+" details ");
+			}
+		}
+		
+	}	
 	private static void display() 
 	{
 		for (Person person : contacts) {
@@ -77,7 +94,8 @@ public class AddressBook
 			System.out.println("Address Book:\n"
 					+ "1) Add Person\n"
 					+ "2) Display\n"
-					+ "3) Edit\n"
+					+ "3) Edit Person\n"
+					+ "4) Delete Person\n"
 					+ "0) Close");
 			Scanner option = new Scanner(System.in);
 			System.out.println("Select an option:");
@@ -92,6 +110,9 @@ public class AddressBook
 				break;
 			case 3:
 				edit();
+				break;
+			case 4:
+				delete();
 				break;
 			case 0:
 				cond=0;

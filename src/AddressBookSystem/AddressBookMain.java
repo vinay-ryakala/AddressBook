@@ -15,7 +15,8 @@ public class AddressBookMain {
 					+ "2) Create new address book\n"
 					+ "3) Search by city or State\n"
 					+ "4) Count By city or state\n"
-					+"5) Close");
+					+"5) sort by city,zip or state\n"					
+					+"6) Close");
 			int option = in.nextInt();
 			if(option == 1)
 				addressBookList.openAddressBook();
@@ -49,7 +50,19 @@ public class AddressBookMain {
 					System.out.println(addressBook.countPersonsByState(state));
 				}
 			}
-			else if (option == 5)
+			else if(option == 5) {
+				System.out.println("1) to sort by  City\n"+"2) to sort  using state	\n"+"3) to sort by  City\n");
+				int check = in.nextInt(); 
+				if(check == 1) 
+				System.out.println(addressBook.sortPersonsByCity());
+				
+				else if(check == 2) 
+				System.out.println(addressBook.sortPersonsByState());
+				
+				else if(check == 3) 
+				System.out.println(addressBook.sortPersonsByZip());
+			}
+			else if (option == 6)
 				break;
 			else
 				System.out.println("Enter Correct option");

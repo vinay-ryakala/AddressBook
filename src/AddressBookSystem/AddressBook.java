@@ -118,5 +118,17 @@ public class AddressBook {
 	public int countPersonsByState(String state) {
 		return contactList.stream().filter(person -> person.getState().equals(state)).collect(Collectors.toList()).size();
 	}
-		
+
+	public List<Person> sortPersonsByCity() {
+		return contactList.stream().sorted((a, b) -> a.getCity().compareTo(b.getCity())).collect(Collectors.toList());
+	}
+
+	public List<Person> sortPersonsByState() {
+		return contactList.stream().sorted((a, b) -> a.getState().compareTo(b.getState())).collect(Collectors.toList());
+	}
+
+	public List<Person> sortPersonsByZip() {
+		return contactList.stream().sorted((a, b) -> a.getZipCode().compareTo(b.getZipCode())).collect(Collectors.toList());
+	}		
 }
+		

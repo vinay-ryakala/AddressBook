@@ -14,7 +14,8 @@ public class AddressBookMain {
 					+ "1) open Existing Address book\n"
 					+ "2) Create new address book\n"
 					+ "3) Search by city or State\n"
-					+ "4) Close\n");
+					+ "4) Count By city or state\n"
+					+"5) Close");
 			int option = in.nextInt();
 			if(option == 1)
 				addressBookList.openAddressBook();
@@ -32,6 +33,20 @@ public class AddressBookMain {
 					System.out.println("Enter State");
 					String state = in.next();
 					System.out.println(addressBook.searchPersonsByState(state));
+				}
+			}
+			else if(option == 4) {
+				System.out.println("1) to Count by  City\n"+"2) to count person using state");
+				int check = in.nextInt(); 
+				if(check == 1) {
+					System.out.println("Enter City");
+					String city = in.next();
+					System.out.println(addressBook.countPersonsByCity(city));
+				}
+				else if(check == 2 ){
+					System.out.println("Enter State");
+					String state = in.next();
+					System.out.println(addressBook.countPersonsByState(state));
 				}
 			}
 			else if (option == 4)

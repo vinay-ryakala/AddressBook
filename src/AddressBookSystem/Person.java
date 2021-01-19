@@ -1,36 +1,36 @@
 package AddressBookSystem;
 
-public class Person 
-{
-	private String firstName;  
-	private String lastName;
-	private String phoneNumber;
-	private String city;
-	private String state;
-	private String zipcode;
-	private String email;
+
+public class Person {
+	//attributes
+	  String firstName;  
+	  String lastName;
+	  String phoneNumber;
+	  String city;
+	  String state;
+	  String zipCode;
+	  String email;
+	  
 
 	  //constructor
-	  public Person(String firstName, String lastName, String phoneNumber, String city, String state, String zipcode, String email) 
-	  {
+	/*  public Person(String firstName, String lastName, String phoneNumber, String city, String state,String zipCode,String email) {
 	    this.firstName = firstName;
 	    this.lastName = lastName;
 	    this.phoneNumber = phoneNumber;
 	    this.city=city;
 		this.state=state;
+		this.zipCode=zipCode;
 		this.email=email;
-		this.zipcode=zipcode;
-	  }
-	
-	public String toString() 
-	{
-		return "Person [firstname=" + firstName + ", lastname=" + lastName + ", phoneNumber=" + phoneNumber+
-				" city=" + city + ", state=" + state + ", zipcode=" + zipcode + ", email=" + email+"]";
+	   
+	  }*/
+	  
+	@Override
+	public String toString() {
+		return "Person [firstname=" + firstName + ", lastname=" + lastName + ", phonenumber=" + phoneNumber + ", city="
+				+ city + ", state=" + state + ", zipcode=" + zipCode + ", email=" + email + "]";
 	}
 
-
-	public String getFirstName() 
-	{
+	public String getFirstName() {
 		return firstName;
 	}
 
@@ -38,23 +38,19 @@ public class Person
 		this.firstName = firstName;
 	}
 
-	public String getLastName() 
-	{
+	public String getLastName() {
 		return lastName;
 	}
 
-	public void setLastName(String lastName) 
-	{
+	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	
-	public String getphoneNumber() 
-	{
-		return lastName;
+
+	public String getPhoneNumber() {
+		return phoneNumber;
 	}
 
-	public void setphoneNumber(String phoneNumber) 
-	{
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 
@@ -75,11 +71,11 @@ public class Person
 	}
 
 	public String getZipCode() {
-		return zipcode;
+		return zipCode;
 	}
 
-	public void setZipCode(String zipcode) {
-		this.zipcode = zipcode;
+	public void setZipCode(String zipCode) {
+		this.zipCode = zipCode;
 	}
 
 	public String getEmail() {
@@ -90,5 +86,6 @@ public class Person
 		this.email = email;
 	}
 
+	
+	
 }
-

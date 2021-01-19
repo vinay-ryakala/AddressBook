@@ -7,7 +7,6 @@ public class AddressBookMain {
 		
 		AddressBookList addressBookList = new AddressBookList();
 		Scanner in = new Scanner(System.in);
-		boolean b = false;
 		System.out.println("Welcome to Addressbook");
 		while(true) {
 			System.out.println("Multiple Address Book:\n"

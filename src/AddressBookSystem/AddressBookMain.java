@@ -49,7 +49,7 @@ public class AddressBookMain {
 					System.out.println(addressBook.countPersonsByState(state));
 				}
 			}
-			else if (option == 4)
+			else if (option == 5)
 				break;
 			else
 				System.out.println("Enter Correct option");

@@ -1,24 +1,24 @@
 package AddressBookSystem;
 
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class AddressBook {
 	Scanner in = new Scanner(System.in);
 	
-	Map<String, Person> contactMap = new HashMap<>();
+	Map<String, Person> contactMap = new TreeMap<>();
 	 static LinkedList<Person> contactList = new LinkedList<>();
 	
 	
 	public AddressBook() {
-		contactMap = new HashMap<>();
+		contactMap = new TreeMap<>();
 	}
 	
 	public Map<String, Person> getContactMap() {
